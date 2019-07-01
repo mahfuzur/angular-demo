@@ -1,0 +1,35 @@
+<nb-card>
+  <nb-card-header>
+    <span>Master Order</span>
+    <span class="badge badge-default float-right m-2">
+      <div class="input-group input-group-sm">
+          <input type="text" placeholder="Search" class="form-control"/>
+        <div class="input-group-append">
+    <span class="input-group-text" id="basic-addon2"><i class="nb-search"></i></span>
+  </div>
+        </div>
+      <!--      <input type="text" placeholder="Project" class="form-control" fieldsize="small"/>-->
+    </span>
+  </nb-card-header>
+
+  <nb-card-body>
+    <nb-tabset>
+      <nb-tab tabTitle="Active">
+        <p>&nbsp;</p>
+        <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
+        </ng2-smart-table>
+      </nb-tab>
+      <nb-tab tabTitle="Pending">
+        <p>&nbsp;</p>
+        <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
+        </ng2-smart-table>
+      </nb-tab>
+      <nb-tab tabTitle="Completed">
+        <p>&nbsp;</p>
+        <ng2-smart-table [settings]="settings" [source]="source" (deleteConfirm)="onDeleteConfirm($event)">
+        </ng2-smart-table>
+      </nb-tab>
+    </nb-tabset>
+
+  </nb-card-body>
+</nb-card>
